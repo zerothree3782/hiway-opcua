@@ -52,6 +52,8 @@ public class SubscriptionBase extends ClientBase {
     public void run(OpcUaClient client, CompletableFuture<OpcUaClient> future) throws Exception {
         // synchronous connect
         client.connect().get();
+
+        //subscription중 연결이 끊겼다가 다시 연결 되었을때  subscription을 재정의 해줘야 한다.
         client.getSubscriptionManager().addSubscriptionListener(new UaSubscriptionManager.SubscriptionListener() {
             @Override
             public void onSubscriptionTransferFailed(UaSubscription subscription, StatusCode statusCode) {
@@ -64,10 +66,6 @@ public class SubscriptionBase extends ClientBase {
         });
 
         subscriptionConfig(client);
-
-        // let the example run for 5 seconds then terminate
-        //Thread.sleep(5000);
-        //future.complete(client);
     }
 
     public void subscriptionConfig(OpcUaClient client) throws Exception{
