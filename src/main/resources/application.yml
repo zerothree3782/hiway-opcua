@@ -1,0 +1,82 @@
+opcua:
+  server-list:
+    -
+      server-name: Device1
+      ip: 10.25.12.154
+      port: 49320
+      user: Administrator
+      password: ENC(IiIuNAVEJM4Vnq47A7KnZw==)
+      namespace: 2
+      rootNode: Simulation Examples
+      readInterval: 100
+      tag-list:
+        - Simulation Examples.Functions.Ramp1
+        - Simulation Examples.Functions.Ramp2
+        - Simulation Examples.Functions.Ramp3
+        - Simulation Examples.Functions.Ramp4
+        - Simulation Examples.Functions.Ramp5
+        - Simulation Examples.Functions.Ramp6
+        - Simulation Examples.Functions.Ramp7
+        - Simulation Examples.Functions.Ramp8
+        - Simulation Examples.Functions.Random1
+        - Simulation Examples.Functions.Random2
+        - Simulation Examples.Functions.Random3
+        - Simulation Examples.Functions.Random4
+        - Simulation Examples.Functions.Random5
+        - Simulation Examples.Functions.Random6
+        - Simulation Examples.Functions.Random7
+        - Simulation Examples.Functions.Random8
+        - Simulation Examples.Functions.Sine1
+        - Simulation Examples.Functions.Sine2
+        - Simulation Examples.Functions.Sine3
+        - Simulation Examples.Functions.Sine4
+        - Simulation Examples.Functions.User1
+        - Simulation Examples.Functions.User2
+        - Simulation Examples.Functions.User3
+        - Simulation Examples.Functions.User4       #subscrition, polling
+      mode: subscription
+    -
+      server-name: Device2
+      ip: 10.25.12.137
+      port: 49320
+      user:
+      password:
+      namespace: 2
+      rootNode: Simulation Examples
+      readInterval: 100
+      tag-list:
+        - Simulation Examples.Functions.Ramp1
+        - Simulation Examples.Functions.Ramp2
+        - Simulation Examples.Functions.Ramp3
+        - Simulation Examples.Functions.Ramp4
+        - Simulation Examples.Functions.Ramp5
+        - Simulation Examples.Functions.Ramp6
+        - Simulation Examples.Functions.Ramp7
+        - Simulation Examples.Functions.Ramp8
+        - Simulation Examples.Functions.Random1
+        - Simulation Examples.Functions.Random2
+        - Simulation Examples.Functions.Random3
+        - Simulation Examples.Functions.Random4
+        - Simulation Examples.Functions.Random5
+        - Simulation Examples.Functions.Random6
+        - Simulation Examples.Functions.Random7
+        - Simulation Examples.Functions.Random8
+        - Simulation Examples.Functions.Sine1
+        - Simulation Examples.Functions.Sine2
+        - Simulation Examples.Functions.Sine3
+        - Simulation Examples.Functions.Sine4
+        - Simulation Examples.Functions.User1
+        - Simulation Examples.Functions.User2
+        - Simulation Examples.Functions.User3
+        - Simulation Examples.Functions.User4
+      mode: polling
+
+jasypt:
+  encryptor:
+    password: pwkey
+
+spring:
+  influx:
+    url: http://10.25.12.136:8086
+    user: guest
+    password: password
