@@ -8,7 +8,7 @@ opcua:
       password: ENC(IiIuNAVEJM4Vnq47A7KnZw==)
       namespace: 2
       rootNode: Simulation Examples
-      readInterval: 100
+      readInterval: 1000
       tag-list:
         - Simulation Examples.Functions.Ramp1
         - Simulation Examples.Functions.Ramp2
@@ -43,7 +43,7 @@ opcua:
       password:
       namespace: 2
       rootNode: Simulation Examples
-      readInterval: 100
+      readInterval: 1000
       tag-list:
         - Simulation Examples.Functions.Ramp1
         - Simulation Examples.Functions.Ramp2

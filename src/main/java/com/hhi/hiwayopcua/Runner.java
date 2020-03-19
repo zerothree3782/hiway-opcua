@@ -67,6 +67,7 @@ public class Runner implements ApplicationRunner {
 //                    @Override
 //                    public void onSubscriptionDataChange(List<UaMonitoredItem> monitoredItems, List<DataValue> dataValues, DateTime publishTime) {
 //                        //가져온 데이터로 수행할 서비스 추가하지 않을 경우 기본으로 로그를 찍습니다.
+//                        influxService.opcUaInsertList(monitoredItems,dataValues,opcuaProperties.getServerName());
 //                    }
 //                });
                 new ClientBaseRunner(subscriptionExample).run();
